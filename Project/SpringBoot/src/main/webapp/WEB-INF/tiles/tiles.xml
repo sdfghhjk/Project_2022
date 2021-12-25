@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+<definition name="login.tiles" template="/WEB-INF/tiles/layout-tiles.jsp">
+	 <put-attribute name="header" value="/WEB-INF/views/commons/header.jsp" />
+	 <put-attribute name="top_menu" value="/WEB-INF/views/commons/top_menu.jsp" />
+     <put-attribute name="main" value="/WEB-INF/views/login/login.jsp" />
+     <put-attribute name="bottom_inc" value="/WEB-INF/views/commons/bottom_inc.jsp" />
+</definition>
+
+<definition name="cart.tiles" extends="login.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/cart/cart.jsp" />
+</definition>
+
+<definition name="main.tiles" template="/WEB-INF/tiles/layouts-leftmenu.jsp">
+	 <put-attribute name="header" value="/WEB-INF/views/commons/header.jsp" />
+	 <put-attribute name="top_menu" value="/WEB-INF/views/commons/top_menu.jsp" />
+	 <put-attribute name="left_menu" value="/WEB-INF/views/main/category.jsp" />
+     <put-attribute name="main" value="/WEB-INF/views/main/main.jsp" />
+     <put-attribute name="bottom_inc" value="/WEB-INF/views/commons/bottom_inc.jsp" />
+</definition>
+
+<definition name="shop.tiles" extends="main.tiles">
+	<put-attribute name="left_menu" value="/WEB-INF/views/commons/left_menu.jsp" />
+	<put-attribute name="main" value="/WEB-INF/views/shop/shop.jsp" />
+</definition>
+
+</tiles-definitions>
