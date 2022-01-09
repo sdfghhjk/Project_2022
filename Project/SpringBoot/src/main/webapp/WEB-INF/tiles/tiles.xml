@@ -15,6 +15,10 @@
 	<put-attribute name="main" value="/WEB-INF/views/cart/cart.jsp" />
 </definition>
 
+<definition name="cc.tiles" extends="login.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/cc/cc.jsp" />
+</definition>
+
 <definition name="main.tiles" template="/WEB-INF/tiles/layouts-leftmenu.jsp">
 	 <put-attribute name="header" value="/WEB-INF/views/commons/header.jsp" />
 	 <put-attribute name="top_menu" value="/WEB-INF/views/commons/top_menu.jsp" />
